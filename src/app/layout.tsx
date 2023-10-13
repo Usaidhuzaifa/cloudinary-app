@@ -1,6 +1,8 @@
+import Navbar from '@/components/shared/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Sidebar from '@/components/shared/Sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +17,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" >
+      <body className={inter.className}>
+        <Navbar/>
+        <div className='flex mt-5 mb-5 min-h-screen  max-w-screen-xl m-auto space-x-2 '>
+            <div className='w-1/5'>
+            <Sidebar/>
+            </div>
+            <div className='p-3 w-full border rounded-2xl shadow-md '>
+                 {children }
+            </div> 
+        </div>
+        </body>
     </html>
   )
 }
