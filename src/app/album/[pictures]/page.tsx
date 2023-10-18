@@ -1,5 +1,5 @@
 import React from 'react'
-import Upload from './Upload'
+
 import cloudinary from "cloudinary"
 import View from './View'
 
@@ -9,21 +9,21 @@ interface MyImage {
 }
 
 
-const page = async () => {
-
+const page = async ( {params}:{params:{pictures:string}}) => {
+  console.log(params)
  let res =( await cloudinary.v2.search
-  .expression('resource_type:image')
+  .expression(`resource_type:image  AND folder=${params.pictures}`)
   .sort_by('public_id','desc')
   .max_results(10)
   .with_field("tags")
   .execute()) as {resources:MyImage[]}
 
-
+  console.log(res)
   return (
-    <div className='px-5 py-5 bg-slate-50/50 rounded-xl'>
+    <div className='px-5 py-5 h-screen bg-slate-50/50 rounded-xl'>
     <div className='flex justify-between'>
-     <h2 className='text-lg font-semibold'>Gallery</h2>
-     <Upload/>
+     <h2 className='text-lg font-semibold'>{`Album-Name: ${params.pictures}`}</h2>
+    
     </div>
     <div className='grid grid-cols-5 gap-3 p-4 '>
       {res.resources.map((items ,i)=>(

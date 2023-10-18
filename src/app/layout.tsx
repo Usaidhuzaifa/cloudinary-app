@@ -18,13 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" >
-      <body className={inter.className}>
+      <body className={` bg-cover bg-fixed bg-center custom-img ${inter.className}`}>
         <Navbar/>
         <div className='flex mt-5 mb-5 min-h-screen  max-w-screen-xl m-auto space-x-2 '>
-            <div className='w-1/5'>
+            <div className='w-1/5 '>
             <Sidebar/>
             </div>
-            <div className='p-3 w-full border rounded-2xl shadow-md '>
+            <div className='w-full shadow-slate-950 rounded-2xl shadow-md '>
                  {children }
             </div> 
         </div>

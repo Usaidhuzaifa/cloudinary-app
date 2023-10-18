@@ -3,7 +3,7 @@ import { CldImage } from 'next-cloudinary'
 import { useState } from 'react'
 import { AiOutlineHeart,AiFillHeart,AiFillFolderAdd} from "react-icons/ai"
 import { AddTags } from './action'
-import AlbumDialog from './albumDialog'
+
 
 const View = ( { src,tag }:{ src:string; tag:string[] }) => {
   const [fav , setFav] = useState(tag.includes("favourite"))
@@ -26,9 +26,7 @@ const View = ( { src,tag }:{ src:string; tag:string[] }) => {
 }
 
 </div>
-<div className='absolute bottom-1 left-1'>
-<AlbumDialog imageData={src}/>
-</div>
+
     </div>
   )
 }
