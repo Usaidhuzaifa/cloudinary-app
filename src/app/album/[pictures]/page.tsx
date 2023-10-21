@@ -20,9 +20,9 @@ const page = async ( {params}:{params:{pictures:string}}) => {
 
   console.log(res)
   return (
-    <div className='px-5 py-5 h-screen bg-slate-50/50 rounded-xl'>
+    <div className='px-5 py-3 h-screen bg-black/90 rounded-xl'>
     <div className='flex justify-between'>
-     <h2 className='text-lg font-semibold'>{`Album-Name: ${params.pictures}`}</h2>
+     <h2 className='text-lg font-semibold text-slate-100'>{`Album-Name: ${params.pictures}`}</h2>
     
     </div>
     <div className='grid grid-cols-5 gap-3 p-4 '>

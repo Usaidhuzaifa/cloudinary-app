@@ -2,6 +2,7 @@ import React from 'react'
 import Upload from './Upload'
 import cloudinary from "cloudinary"
 import View from './View'
+import { FcGallery } from 'react-icons/fc'
 
 interface MyImage {
   public_id:string,
@@ -20,9 +21,12 @@ const page = async () => {
 
 
   return (
-    <div className='px-5 py-5 bg-slate-50/50 rounded-xl'>
+    <div className='px-5 py-5 bg-black/90 rounded-xl'>
     <div className='flex justify-between'>
-     <h2 className='text-lg font-semibold'>Gallery</h2>
+      <div className='flex justify-center items-center gap-x-3 pl-3'>
+      <FcGallery className=" h-6 w-6"/>
+     <h2 className='text-xl font-semibold text-slate-50'>Gallery</h2>
+      </div>
      <Upload/>
     </div>
     <div className='grid grid-cols-5 gap-3 p-4 '>

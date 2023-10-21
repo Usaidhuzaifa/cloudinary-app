@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Sidebar from '@/components/shared/Sidebar'
+import Footer from '@/components/shared/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,13 +22,14 @@ export default function RootLayout({
       <body className={` bg-cover bg-fixed bg-center custom-img ${inter.className}`}>
         <Navbar/>
         <div className='flex mt-5 mb-5 min-h-screen  max-w-screen-xl m-auto space-x-2 '>
-            <div className='w-1/5 '>
+            <div className='md:w-1/5 '>
             <Sidebar/>
             </div>
-            <div className='w-full shadow-slate-950 rounded-2xl shadow-md '>
+            <div className='rounded-2xl shadow-md w-full  shadow-zinc-500'>
                  {children }
             </div> 
         </div>
+        <Footer/>
         </body>
     </html>
   )

@@ -13,7 +13,7 @@ import Link from "next/link"
 const AlbumList = ({folder}:{folder:folderType}) => {
   return (
     <div>
-      <Card className="w-[350px]">
+      <Card className="w-[350px] bg-slate-300">
       <CardHeader>
         <CardTitle>{folder.name.toLocaleUpperCase()}</CardTitle>
         <CardDescription>Click on view Button</CardDescription>

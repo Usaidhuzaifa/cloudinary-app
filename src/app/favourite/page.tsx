@@ -1,6 +1,7 @@
 import React from 'react'
 import cloudinary from "cloudinary"
 import FavouriteList from './favouriteList'
+import { AiFillHeart } from 'react-icons/ai'
 
 export interface MyImage {
   public_id:string,
@@ -19,9 +20,12 @@ const page = async () => {
 
   console.log(res)
   return (
-    <div>
+    <div className='bg-black/90 h-screen rounded-xl p-5'>
     <div className='flex justify-between'>
-     <h2 className='text-lg font-semibold'>Favourite</h2>
+     <h2 className='flex items-center gap-x-2 text-2xl font-semibold text-slate-50'>
+     <AiFillHeart  className=" h-7 w-7 text-red-500"/>
+      Favourite
+      </h2>
      
     </div>
    <FavouriteList resources={res.resources}/>

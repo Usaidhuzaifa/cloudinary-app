@@ -8,7 +8,7 @@ import AlbumDialog from './albumDialog'
 const View = ( { src,tag }:{ src:string; tag:string[] }) => {
   const [fav , setFav] = useState(tag.includes("favourite"))
   return (
-    <div className='relative'>
+    <div className='relative '>
       <CldImage
   width="200"
   height="100"
