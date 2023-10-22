@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     
       
-<nav className="max-w-screen-xl m-auto bg-black/90 rounded-full mt-3">
+<nav className="max-w-screen-xl m-auto shadow-md   shadow-slate-900  bg-black/90 rounded-full mt-3">
   <div className=" flex flex-wrap items-center justify-between mx-auto p-3">
 
   <Link href="/" className="flex items-center text-slate-100">

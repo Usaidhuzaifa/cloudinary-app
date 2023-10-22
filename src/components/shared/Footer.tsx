@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="max-w-screen-xl m-auto rounded-lg shadow mb-2 bg-black/90">
+    <footer className="max-w-screen-xl m-auto rounded-lg shadow-lg shadow-slate-900 mb-2 bg-black/90">
     <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
       <span className="text-sm text-gray-50 sm:text-center dark:text-gray-400">© 2023 <Link href="#" className="hover:underline">CloudGem™</Link>. All Rights Reserved.
     </span>

@@ -25,7 +25,7 @@ export default function RootLayout({
             <div className='md:w-1/5 '>
             <Sidebar/>
             </div>
-            <div className='rounded-2xl shadow-md w-full  shadow-zinc-500'>
+            <div className='rounded-2xl shadow-xl w-full shadow-slate-900'>
                  {children }
             </div> 
         </div>
